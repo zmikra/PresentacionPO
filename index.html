@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Interactivo - Proyecto Ocupacional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Mi proyecto ocupacional</h1>
+        
+        <!-- Las distintas secciones de contenido -->
+        <div id="intro" class="node">
+            <h3>Comienza aquí</h3>
+            <div class="details">
+                <p>¡Hola! Soy Micaela, y este es un resumen de mi proyecto ocupacional.</p>
+                <button onclick="unlockOption('interests', this)">¡Empecemos!</button>
+            </div>
+        </div>
+
+        <div id="interests" class="node hidden">
+            <h3>Mis Intereses</h3>
+            <div class="details">
+                <p>Mis principales intereses son jugar videojuegos y leer.</p>
+                <button onclick="unlockOption('academics', this)">Siguiente paso: ¿Qué estudié?</button>
+            </div>
+        </div>
+
+        <div id="academics" class="node hidden">
+            <h3>Mi Trayecto Académico</h3>
+            <div class="details">
+                <p>Bachillerato opción derecho y varios cursos, entre ellos: TGSIT, diseño gráfico y desarrollo web.</p>
+                <button onclick="unlockOption('work', this)">¿Dónde trabajé?</button>
+            </div>
+        </div>
+
+        <div id="work" class="node hidden">
+            <h3>Mi Trayecto Laboral</h3>
+            <div class="details">
+                <p>Trabajé en call center, imprenta y tiendas de atención al cliente.</p>
+                <button onclick="unlockOption('strengths', this)">Fortaleza</button>
+            </div>
+        </div>
+
+        <div id="strengths" class="node hidden">
+            <h3>Fortalezas</h3>
+            <div class="details">
+                <p>Una de mis principales fortalezas es mi perseverancia.</p>
+                <button onclick="unlockOption('weaknesses', this)">Debilidades</button>
+            </div>
+        </div>
+
+        <div id="weaknesses" class="node hidden">
+            <h3>Debilidades</h3>
+            <div class="details">
+                <p>Mi mayor debilidad es mi dificultad para organizarme, pero estoy trabajando en mejorar eso.</p>
+                <button onclick="unlockOption('goals', this)">Mis objetivos a futuro</button>
+            </div>
+        </div>
+
+        <div id="goals" class="node hidden">
+            <h3>Mis Objetivos a mediano y largo plazo</h3>
+            <div class="details">
+                <p>Mis metas son especializarme en seguridad informática, encontrar un trabajo remoto que me permita viajar y finalmente inscribirme en la facultad.</p>
+                <button onclick="unlockOption('action-plan', this)">Plan de Acción</button>
+            </div>
+        </div>
+
+        <div id="action-plan" class="node hidden">
+            <h3>Plan de Acción</h3>
+            <div class="details">
+                <ul>
+                    <li>Ahorro y dedicación al estudio</li>
+                    <li>Actualizar mi CV y perfil de LinkedIn</li>
+                    <li>Reunir la documentación e inscribirme a la facultad</li>
+                </ul>
+                <button onclick="finishGame()">¡He terminado mi proyecto!</button>
+            </div>
+        </div>
+
+        <!-- Resumen final -->
+        <div id="summary" class="node hidden">
+            <h3>Resumen de mi Proyecto Ocupacional</h3>
+            <div class="details">
+                <p>Este fue un resumen de mi proyecto ocupacional. ¡Gracias por verlo!</p>
+                <!-- Imagen del meme de gatito sonriente -->
+                <!-- Imagen del gato como botón -->
+<button id="restart-button" class="cat-button">
+    <img src="/1.jpg" alt="Gatito Sonriente" class="cat-meme">
+</button>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
